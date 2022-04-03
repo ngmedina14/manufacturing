@@ -1,0 +1,22 @@
+{
+  "name": "manufacturing",
+  "version": "1.0.0",
+  "description": "Demo for Express",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "express-handlebars": "^6.0.3",
+    "hbs": "^4.2.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "express": "^4.17.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Neil Medina",
+  "license": "ISC"
+}

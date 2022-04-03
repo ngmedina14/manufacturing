@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <form action="/auth/update-product" method="post">
+    <label for="product_id">Product ID</label><br>
+    <input name="product_id" id="product_id" readonly type="text" value="{{product.product_id}}"><br>
+    <label for="product_name">Product Name</label><br>
+    <input name="product_name" id="product_name" type="text" value="{{product.product_name}}"><br>
+    <label for="product_description">Description</label><br>
+    <input name="product_description" id="product_description" type="text" value="{{product.product_description}}"><br>
+    <label for="product_quantity">Quantity</label><br>
+    <input name="product_quantity" id="product_quantity" type="text" value="{{product.product_quantity}}"><br>
+    <label for="supplier_id"></label>
+    <select name="supplier_id" id="supplier_id" multiple>
+        {{#each suppliers}}
+        <option {{#if selected}}{{selected}}{{/if}} value="{{this.supplier_id}}">{{this.supplier_name}}</option>
+        {{/each}}
+    </select>
+    <button type="submit">Save</button>
+    </form>
+    {{#if message}}
+        <h4>{{message}}</h4>
+    {{/if}}
+</body>
+</html>
